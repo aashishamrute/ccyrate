@@ -449,6 +449,7 @@
 					<version>0.5.7</version>
 					<configuration>
 						<appName>ccyrate</appName>
+					    <jdkVersion>${java.version}</jdkVersion>
 					</configuration>
 				</plugin>
 		</plugins>
