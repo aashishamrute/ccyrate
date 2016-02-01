@@ -448,7 +448,7 @@
 					<artifactId>heroku-maven-plugin</artifactId>
 					<version>0.5.7</version>
 					<configuration>
-						<appName>ccyrate-app-1234</appName>
+						<appName>ccyrate</appName>
 					</configuration>
 				</plugin>
 		</plugins>
