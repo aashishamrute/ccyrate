@@ -28,7 +28,6 @@ import com.ccy.domain.validate.ConfimPassowrd;
  * Entity implementation class for Entity: User
  * @author Aashish Amrute
  */
-//@UniqueCheck(columnName={"username"})
 @Entity
 @ConfimPassowrd
 @Configurable
@@ -214,50 +213,5 @@ public class User implements Serializable {
         if (id == null) return null;
         return entityManager().find(User.class, id);
     }
-	
-	/*public static List<?> findByFieldName(Object o, String[] fieldNames) {
-
-		if (fieldNames.length == 0) {
-			return Collections.EMPTY_LIST;
-		}
-
-		String query = "Select o from " + o.getClass().getSimpleName() + " o ";
-		String where = null; 
-
-		for (String field : fieldNames) {
-			
-			if (where == null){
-				where = "where";
-			}else {
-				where = "and";
-			}
-			
-			try {
-				where += " o." + field + " = '"
-						+ (String) o.getClass()
-								.getDeclaredMethod("get" + field.substring(0, 1).toUpperCase() + field.substring(1))
-								.invoke(o) + "' ";
-			} catch (IllegalAccessException e) {
-			//	LOG.error("Exception in findByFieldName ", e);
-				throw new RuntimeException(e);
-			} catch (IllegalArgumentException e) {
-			//	LOG.error("Exception in findByFieldName ", e);
-				throw new RuntimeException(e);
-			} catch (InvocationTargetException e) {
-			//	LOG.error("Exception in findByFieldName ", e);
-				throw new RuntimeException(e);
-			} catch (NoSuchMethodException e) {
-			//	LOG.error("Invalid Field: " + field, e);
-				throw new RuntimeException(e);
-			} catch (SecurityException e) {
-			//	LOG.error("Securtiy Exception in findByFieldName ", e);
-				throw new RuntimeException(e);
-			}
-		}
-		
-		//return Collections.EMPTY_LIST;
-		return entityManager().createQuery(query + where).getResultList();
-		
-	} */
 	
 }
