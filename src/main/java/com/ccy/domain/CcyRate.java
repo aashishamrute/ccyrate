@@ -28,7 +28,7 @@ import org.springframework.transaction.annotation.Transactional;
  *
  */
 @Entity
-@NamedQuery(name="CcyRate.findByUserName",query="Select h from CcyRate h where h.username.username = :username order by h.rateDate desc")
+@NamedQuery(name="CcyRate.findByUserName",query="Select h from CcyRate h where h.username.username = :username order by h.creDate desc")
 @Configurable
 public class CcyRate implements Serializable {
 

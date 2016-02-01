@@ -16,7 +16,7 @@
             <table:column id="c_ccyTo" property="ccyTo"/>
             <table:column id="c_rate" property="rate"/>
             <table:column date="true" dateTimePattern="${ccy_hist_date_format}" id="c_rateDate" property="rateDate"/>
-            <table:column date="true" dateTimePattern="${ccyhist_ratedate_format}" id="c_search_date" property="creDate" sort="true"/>
+            <table:column date="true" dateTimePattern="${ccyhist_ratedate_format}" id="c_search_date" property="creDate"/>
         </table:table>
     </form:list>
 </div>
